@@ -189,7 +189,7 @@ Write the following constraints. You may write your constraints either as contai
 
 a) A PC with a processor speed less than 2.00 must not sell for more than $500.
 
-b) A laptop with a screen size less than 15.4 inches must have at least a 100 gigabyte hard disk or sP.ll for less than $1000.
+b) A laptop with a screen size less than 15.4 inches must have at least a 100 gigabyte hard disk or sell for less than $1000.
 
 !c) No manufacturer of PC's may also make laptops.
 
