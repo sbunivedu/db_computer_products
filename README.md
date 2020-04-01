@@ -149,27 +149,27 @@ FROM Product, Printer
 WHERE Product.model = Printer.model;
 
 // find laptops made by a manufacturer that doesn't make printers
-SELECT model
+SELECT Product.model
 FROM Product, Laptop
 WHERE Product.model = Laptop.model
 AND maker NOT IN (
   SELECT DISTINCT maker
   FROM Product, Printer
-  WHERE Product.model = Printer.model;
-)
+  WHERE Product.model = Printer.model
+);
 
 // delete such laptops
 DELETE FROM Laptop
 WHERE model IN (
-  SELECT model
+  SELECT Product.model
   FROM Product, Laptop
   WHERE Product.model = Laptop.model
   AND maker NOT IN (
     SELECT DISTINCT maker
     FROM Product, Printer
-    WHERE Product.model = Printer.model;
+    WHERE Product.model = Printer.model
   )
-)
+);
 ```
 
 e) Manufacturer A buys manufacturer B. Change all products made by B so they are now made by A.
